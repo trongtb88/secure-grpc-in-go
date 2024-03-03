@@ -1,9 +1,27 @@
 # secure-grpc-in-go
 Secure gRPC in Golang
 
-## Install gRPC
+## Setup development environment
+
+- Install `protoc`:
+
 ```bash
-$ go get -u google.golang.org/grpc
+brew install protobuf
+```
+
+- Install `protoc-gen-go` and `protoc-gen-go-grpc`
+
+```bash
+go get google.golang.org/protobuf/cmd/protoc-gen-go
+go get google.golang.org/grpc/cmd/protoc-gen-go-grpc
+```
+
+- Install `protoc-gen-grpc-gateway` and `protoc-gen-openapiv2`
+
+```bash
+go get github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway
+go get github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2
+```
 ```
 ## Generate gRPC code
 ```bash
