@@ -48,7 +48,7 @@ func (client *LaptopClient) CreateLaptop(laptop *pb.Laptop) (*pb.CreateLaptopRes
 	return resp, nil
 }
 
-func (client *LaptopClient) SearchLaptop(filter *pb.Filter, found func(laptop *pb.SearchLaptopResponse)) error {
+func (client *LaptopClient) SearchLaptop(filter *pb.Filter) error {
 	req := &pb.SearchLaptopRequest{Filter: filter}
 
 	// set timeout

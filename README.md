@@ -30,10 +30,16 @@ $ make gen
 
 ## Generate SSL Certificates
 ```bash
-$ go run generate_cert.go
+$ make cert
 ```
 
 ## Run the server
 ```bash
-$ go run server.go
+$  go run cmd/server/main.go -port 8080 -tls
+```
+
+## Run the client to test
+```bash
+Open new tab at terminal and run the client
+$   go run cmd/client/main.go -address 0.0.0.0:8080 -tls
 ```
